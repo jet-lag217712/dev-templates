@@ -1,0 +1,33 @@
+name: CI — Backend Python
+
+on:
+  push:
+    paths:
+      - "templates/backend-python/**"
+  pull_request:
+    paths:
+      - "templates/backend-python/**"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: templates/backend-python
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -f .devcontainer/Dockerfile -t backend-python:ci .
+
+      - name: Run tests inside container
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}/templates/backend-python:/workspace" \
+            -w /workspace \
+            backend-python:ci \
+            pytest app/tests/ -v

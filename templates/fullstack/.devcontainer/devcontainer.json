@@ -25,6 +25,14 @@
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
       }
+    },
+    "jetbrains": {
+      "backend": "PyCharm",
+      "plugins": [
+        "Docker",
+        "com.intellij.requirements",
+        "com.intellij.database"
+      ]
     }
   },
   "postCreateCommand": "pip install -r backend/requirements.txt && cd frontend && npm install"

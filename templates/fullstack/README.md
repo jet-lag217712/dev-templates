@@ -21,7 +21,9 @@ docker compose up
 
 ## Dev Container
 
-Open this folder in VS Code and select **"Reopen in Container"** to get a unified Python + Node.js development environment connected to all services.
+Open this folder in VS Code and select **"Reopen in Container"**, or open it in PyCharm and select **"Dev Containers"** to get a unified Python + Node.js development environment connected to all services.
+
+> **WebStorm users:** The dev container is configured with PyCharm as the primary JetBrains backend (connecting to the `api` service). To work on the React frontend with WebStorm, open the `frontend/` sub-directory as a separate project.
 
 ## Running Tests
 

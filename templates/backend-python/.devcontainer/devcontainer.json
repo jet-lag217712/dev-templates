@@ -19,6 +19,13 @@
           "editor.defaultFormatter": "ms-python.black-formatter"
         }
       }
+    },
+    "jetbrains": {
+      "backend": "PyCharm",
+      "plugins": [
+        "Docker",
+        "com.intellij.requirements"
+      ]
     }
   },
   "postCreateCommand": "pip install -r requirements.txt"

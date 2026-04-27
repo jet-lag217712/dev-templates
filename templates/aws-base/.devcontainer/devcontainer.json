@@ -23,6 +23,13 @@
           "editor.defaultFormatter": "hashicorp.terraform"
         }
       }
+    },
+    "jetbrains": {
+      "backend": "IntelliJ IDEA",
+      "plugins": [
+        "org.intellij.plugins.hcl",
+        "aws.toolkit"
+      ]
     }
   },
   "postCreateCommand": "terraform -version && aws --version"

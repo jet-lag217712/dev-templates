@@ -16,6 +16,13 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
       }
+    },
+    "jetbrains": {
+      "backend": "WebStorm",
+      "plugins": [
+        "Docker",
+        "com.intellij.plugins.tailwindcss"
+      ]
     }
   },
   "postCreateCommand": "npm install"
